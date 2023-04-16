@@ -16,10 +16,16 @@ function App() {
       children: [
         {
           path: '/',
+          loader: async () => {
+            return fetch('products.json');
+          },
           element: <Shop></Shop>
         }, 
         {
           path: '/orders',
+          loader: async () => {
+            return fetch('products.json');
+          },
           element: <Orders></Orders>
         },
         {
